@@ -1,1 +1,309 @@
-<h1>Hello World Wide Web!</h1>
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <title>Leo AI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #f0f9f7 0%, #e8f1f5 100%);
+      color: #34495e;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 75em; /* 1200px equivalent */
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 3.75em;
+      text-align: left;
+      border-radius: 1.25em;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 1.25em 0;
+      box-shadow: 0 0.25em 0.6em rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 1.5em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #438a7d;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: #2c3e50;
+    }
+
+    section {
+      margin-bottom: 5em;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4em;
+      margin-bottom: 0.2em;
+      color: #438a7d;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: #2c3e50;
+      border-bottom: 0.1em solid #438a7d;
+      padding-bottom: 0.4em;
+      margin-bottom: 1.5em;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      text-transform: uppercase;
+      color: #438a7d;
+      margin-top: 2em;
+    }
+
+    p {
+      font-size: 1.15em;
+      line-height: 1.8;
+      margin-bottom: 1.5em;
+    }
+
+    .hero-img {
+      display: block;
+      margin: 0 auto 1.5em auto;
+      width: 9em; 
+      height: 9em;
+      border-radius: 2em;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25em;
+      margin-top: 2.5em;
+    }
+
+    .feature-item {
+      flex: 1;
+      min-width: 15em;
+      padding: 1.5em;
+      background: #ffffff;
+      border: 0.06em solid #d1e7e3;
+      border-radius: 1em;
+      text-align: center;
+      transition: transform 0.2s;
+      box-shadow: 0 0.3em 0.5em rgba(0,0,0,0.03);
+    }
+
+    .feature-item:hover {
+      transform: translateY(-0.3em);
+      border-color: #438a7d;
+    }
+
+    .feature-item strong {
+      display: block;
+      color: #438a7d;
+      margin-bottom: 0.5em;
+    }
+
+    .showcase-img {
+      width: 20em;
+      height: 12.5em;
+      margin: 0.6em;
+      border-radius: 1em;
+      object-fit: cover;
+    }
+
+    .large-img {
+      width: 100%;
+      height: 25em;
+      margin: 2em 0;
+      border-radius: 1.5em;
+      object-fit: cover;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2.5em 0;
+      background: white;
+      border-radius: 0.6em;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 1em;
+      text-align: left;
+      border-bottom: 0.06em solid #eee;
+    }
+
+    th {
+      background-color: #f0f9f7;
+      color: #438a7d;
+    }
+
+    footer {
+      background-color: #ffffff;
+      color: #34495e;
+      padding: 2.5em;
+      text-align: center;
+      border-top: 0.06em solid #d1e7e3;
+    }
+
+    footer a {
+      color: #438a7d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#Home">HOME</a></li>
+      <li><a href="#About">ABOUT</a></li>
+      <li><a href="#DeepDive">DEEP DIVE</a></li>
+      <li><a href="#PremiereTools">PREMIERE TOOLS</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <section id="Home">
+      <img src="leo-icon.png" alt="Leo AI Icon" class="hero-img"> 
+      <h1>Leo AI</h1>
+      <p style="text-align:center; font-weight:bold;">Your AI study companion. Leo doesn't just give answers — he helps you think.</p>
+      
+      <div class="feature-grid">
+        <div class="feature-item">Summarize Notes</div> 
+        <div class="feature-item">Generate Flashcards</div> 
+        <div class="feature-item">Explain Simply</div> 
+        <div class="feature-item">Smart Calendar</div> 
+        <div class="feature-item">Streaming Chat</div> 
+      </div>
+
+      <div style="text-align:center; margin-top:2.5em;">
+        <img src="showcase1.jpg" alt="Showcase 1" class="showcase-img"> 
+        <img src="showcase2.jpg" alt="Showcase 2" class="showcase-img"> 
+        <img src="showcase3.jpg" alt="Showcase 3" class="showcase-img"> 
+      </div>
+    </section>
+
+    <section id="About">
+      <h2>What Is Leo?</h2> 
+      <p>Leo is a next-generation educational AI built for students at every level. Unlike traditional study tools that deliver static content, Leo adapts to your education level, guides you through problems step-by-step, and saves key insights to your personal Study Vault automatically.</p>
+      
+      <img src="about-big.jpg" alt="About Leo Section Image" class="large-img"> 
+      <p>With real-time streaming responses, file attachment support for vision-based analysis, and a full session history system, Leo functions as both a personal tutor and a study management platform.</p>
+    </section>
+
+    <section id="DeepDive">
+      <h2>Deep Dive</h2> 
+      <img src="deepdive-big.jpg" alt="Deep Dive Header Image" class="large-img"> 
+      
+      <h3>The Problem</h3> 
+      <p>Students struggle with one-size-fits-all learning. Traditional educational software ignores individual learning curves, leaving students behind or turning study into passive time-wasting.</p>
+
+      <h3>Key Features</h3> 
+      <div class="feature-grid">
+        <div class="feature-item">
+          <strong>Adaptive Tutor</strong>
+          Adjusts difficulty based on your education level.
+        </div>
+        <div class="feature-item">
+          <strong>Study Vault</strong>
+          Auto-generated notes saved automatically.
+        </div>
+        <div class="feature-item">
+          <strong>History & Search</strong>
+          Search and resume any past conversation.
+        </div>
+        <div class="feature-item">
+          <strong>Vision Support</strong>
+          Learn using file attachments and diagrams.
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Adaptive Tutor</td>
+          <td>Difficulty scaling based on user level.</td>
+        </tr>
+        <tr>
+          <td>Study Vault</td>
+          <td>Automatic saving of knowledge retention notes.</td>
+        </tr>
+        <tr>
+          <td>Vision Support</td>
+          <td>Analysis of diagrams and file attachments.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="PremiereTools">
+      <h2>Premiere Tools</h2> 
+      <p>Leo's premium toolkit includes scholarship searches, university rankings, citations, grade tracking, resume building, and AI-powered writing—all built into the platform.</p>
+      
+      <div class="feature-grid">
+        <div class="feature-item">
+          <strong>Scholarship Search</strong>
+          Find awards matching your profile.
+        </div>
+        <div class="feature-item">
+          <strong>University Rankings</strong>
+          Browse post-secondary rankings by program.
+        </div>
+        <div class="feature-item">
+          <strong>Citation Engine</strong>
+          Generate APA, MLA, or Chicago formats instantly.
+        </div>
+        <div class="feature-item">
+          <strong>Resume Builder</strong>
+          Create ATS-optimized layouts with PDF export.
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>For more information, contact <a href="mailto:ds2jin@uwaterloo.ca">ds2jin@uwaterloo.ca</a></p>
+    <p>External Resource: <a href="https://tsgstudios.com" target="_blank">TSG Studios Official Hub</a></p>
+  </footer>
+
+</body>
+</html>
