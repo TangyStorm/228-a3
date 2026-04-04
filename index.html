@@ -15,35 +15,36 @@
 
       body {
         font-family: 'Lato', sans-serif;
-        background: linear-gradient(135deg, #f0f9f7 0%, #e8f1f5 100%);
+        background: #f0f9f7;
         color: #34495e;
         margin: 0;
         padding: 0;
-        text-align: center;
+        font-size: 1em;
       }
 
       .container {
-        max-width: 75em;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.7);
+        width: 75em;
+        background-color: white;
         padding: 3.75em;
-        text-align: left;
         border-radius: 1.25em;
-        margin-top: 2em;
-        margin-bottom: 2em;
+        box-shadow: 0 0.625em 1.875em rgba(0,0,0,0.05);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       nav {
         background-color: #ffffff;
         padding: 1.25em 0;
-        box-shadow: 0 0.25em 0.6em rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.05);
+        text-align: center;
       }
 
       nav ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        text-align: center;
       }
 
       nav li {
@@ -51,16 +52,10 @@
         margin: 0 1.5em;
       }
 
-      nav a {
-        text-decoration: none;
-        color: #438a7d;
-        font-weight: bold;
-        font-size: 1.1em;
-      }
-
-      nav a:hover {
-        color: #2c3e50;
-      }
+      nav a:link { text-decoration: none; color: #438a7d; font-weight: bold; }
+      nav a:visited { color: #6a9c93; }
+      nav a:hover { color: #2c3e50; border-bottom: 0.125em solid #438a7d; }
+      nav a:active { color: #e67e22; }
 
       section {
         margin-bottom: 5em;
@@ -69,7 +64,7 @@
       h1 {
         font-family: 'Playfair Display', serif;
         font-size: 4em;
-        margin-bottom: 0.2em;
+        margin-bottom: 0.625em;
         color: #438a7d;
         text-align: center;
       }
@@ -78,20 +73,20 @@
         font-family: 'Playfair Display', serif;
         font-size: 2.5em;
         color: #2c3e50;
-        border-bottom: 0.1em solid #438a7d;
-        padding-bottom: 0.4em;
-        margin-bottom: 1.5em;
+        border-bottom: 0.05em solid #438a7d;
+        padding-bottom: 0.25em;
+        margin-bottom: 0.75em;
       }
 
       h3 {
-        font-size: 1.4em;
+        font-size: 1.375em;
         text-transform: uppercase;
         color: #438a7d;
-        margin-top: 2em;
+        margin-top: 2.5em;
       }
 
       p {
-        font-size: 1.15em;
+        font-size: 1.125em;
         line-height: 1.8;
         margin-bottom: 1.5em;
       }
@@ -99,34 +94,29 @@
       .hero-img {
         display: block;
         margin: 0 auto 1.5em auto;
-        width: 9em;
-        height: 9em;
         border-radius: 2em;
       }
 
       .feature-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.25em;
         margin-top: 2.5em;
       }
 
       .feature-item {
-        flex: 1;
-        min-width: 15em;
         padding: 1.5em;
         background: #ffffff;
-        border: 0.06em solid #d1e7e3;
+        border: 0.0625em solid #d1e7e3;
         border-radius: 1em;
         text-align: center;
-        transition: transform 0.2s;
-        box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
       }
 
       .feature-item:hover {
-        transform: translateY(-0.3em);
+        transform: translateY(-0.3125em);
         border-color: #438a7d;
+        box-shadow: 0 0.3125em 0.9375em rgba(0,0,0,0.05);
       }
 
       .feature-item strong {
@@ -135,10 +125,16 @@
         margin-bottom: 0.5em;
       }
 
+      .showcase-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.625em;
+        margin-top: 2.5em;
+      }
+
       .showcase-img {
-        width: 20em;
+        width: 100%;
         height: 12.5em;
-        margin: 0.6em;
         border-radius: 1em;
         object-fit: cover;
       }
@@ -156,15 +152,12 @@
         border-collapse: collapse;
         margin: 2.5em 0;
         background: white;
-        border-radius: 0.6em;
-        overflow: hidden;
       }
 
-      th,
-      td {
+      th, td {
         padding: 1em;
         text-align: left;
-        border-bottom: 0.06em solid #eee;
+        border-bottom: 0.0625em solid #eee;
       }
 
       th {
@@ -174,16 +167,13 @@
 
       footer {
         background-color: #ffffff;
-        color: #34495e;
         padding: 2.5em;
         text-align: center;
-        border-top: 0.06em solid #d1e7e3;
+        border-top: 0.0625em solid #d1e7e3;
       }
 
-      footer a {
-        color: #438a7d;
-        font-weight: bold;
-      }
+      footer a:link { color: #438a7d; font-weight: bold; text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
     </style>
   </head>
 
@@ -201,7 +191,7 @@
     <div class="container">
 
       <section id="Home">
-        <img src="leo-icon.png" alt="Leo AI Icon" class="hero-img">
+        <img src="leo-icon.png" alt="Leo AI Icon" width="144" height="144" class="hero-img">
         <h1>Leo AI</h1>
         <p style="text-align:center; font-weight:bold;">Your AI study companion. Leo doesn't just give answers — he helps you think.</p>
 
@@ -209,88 +199,90 @@
           <div class="feature-item">Summarize Notes</div>
           <div class="feature-item">Generate Flashcards</div>
           <div class="feature-item">Explain Simply</div>
-          <div class="feature-item">Smart Calendar</div>
-          <div class="feature-item">Streaming Chat</div>
         </div>
 
-        <div style="text-align:center; margin-top:2.5em;">
-          <img src="showcase1.jpg" alt="Showcase 1" class="showcase-img">
-          <img src="showcase2.jpg" alt="Showcase 2" class="showcase-img">
-          <img src="showcase3.png" alt="Showcase 3" class="showcase-img">
+        <div class="showcase-container">
+          <img src="showcase1.jpg" alt="Leo Interface 1" width="350" height="200" class="showcase-img">
+          <img src="showcase2.jpg" alt="Leo Interface 2" width="350" height="200" class="showcase-img">
+          <img src="showcase3.png" alt="Leo Interface 3" width="350" height="200" class="showcase-img">
         </div>
       </section>
 
       <section id="About">
         <h2>What Is Leo?</h2>
-        <p>Leo is a next-generation educational AI built for students at every level. Unlike traditional study tools that deliver static content, Leo adapts to your education level, guides you through problems step-by-step, and saves key insights to your personal Study Vault automatically.</p>
+        <p>Leo is a next-generation educational AI built for students at every level. Unlike traditional study tools that deliver static content, Leo adapts to your education level and guides you through problems step-by-step.</p>
 
-        <img src="about-big.jpg" alt="About Leo Section Image" class="large-img">
-        <p>With real-time streaming responses, file attachment support for vision-based analysis, and a full session history system, Leo functions as both a personal tutor and a study management platform.</p>
+        <img src="about-big.jpg" alt="Student using Leo AI" width="1080" height="400" class="large-img">
+        <p>Leo functions as both a personal tutor and a study management platform, featuring a personal Study Vault and full session history.</p>
       </section>
 
       <section id="DeepDive">
         <h2>Deep Dive</h2>
-        <img src="deepdive-big.jpg" alt="Deep Dive Header Image" class="large-img">
+        <img src="deepdive-big.jpg" alt="Deep Dive Analysis" width="1080" height="400" class="large-img">
 
         <h3>The Problem</h3>
-        <p>Students struggle with one-size-fits-all learning. Traditional educational software ignores individual learning curves, leaving students behind or turning study into passive time-wasting.</p>
+        <p>Traditional educational software often ignores individual learning curves, leaving students behind or under-challenged. Leo uses adaptive algorithms to personalize lessons in real time.</p>
 
         <h3>Key Features</h3>
         <div class="feature-grid">
           <div class="feature-item">
             <strong>Adaptive Tutor</strong>
-            Adjusts difficulty based on your education level.
+            Adjusts difficulty based on education level.
           </div>
           <div class="feature-item">
             <strong>Study Vault</strong>
-            Auto-generated notes saved automatically.
-          </div>
-          <div class="feature-item">
-            <strong>History & Search</strong>
-            Search and resume any past conversation.
+            Saves key insights and notes automatically.
           </div>
           <div class="feature-item">
             <strong>Vision Support</strong>
-            Learn using file attachments and diagrams.
+            Analyze diagrams and file attachments.
           </div>
         </div>
 
         <table>
           <tr>
             <th>Feature</th>
-            <th>Description</th>
+            <th>Benefit</th>
           </tr>
           <tr>
-            <td>Adaptive Tutor</td>
-            <td>Difficulty scaling based on user level.</td>
+            <td>Session History</td>
+            <td>Every conversation is saved, searchable, and resumable.</td>
           </tr>
           <tr>
-            <td>Study Vault</td>
-            <td>Automatic saving of knowledge retention notes.</td>
+            <td>Smart Calendar</td>
+            <td>Auto-creates events from your study chats.</td>
           </tr>
           <tr>
-            <td>Vision Support</td>
-            <td>Analysis of diagrams and file attachments.</td>
+            <td>Spaced Repetition</td>
+            <td>Engine built for long-term knowledge retention.</td>
           </tr>
         </table>
       </section>
 
       <section id="PremiereTools">
         <h2>Premiere Tools</h2>
-        <p>Leo's premium toolkit includes scholarship searches, university rankings, citations, grade tracking, resume building, and AI-powered writing—all built into the platform.</p>
+        <p>Leo includes a suite of premium features designed to supercharge your academic journey, from financial aid to career prep.</p>
 
         <div class="feature-grid">
           <div class="feature-item">
             <strong>Scholarship Search</strong>
-            Find awards matching your profile.
-          </div>
-          <div class="feature-item">
-            <strong>University Rankings</strong>
-            Browse post-secondary rankings by program.
+            Find awards based on profile, GPA, and field.
           </div>
           <div class="feature-item">
             <strong>Citation Engine</strong>
             Generate APA, MLA, or Chicago formats instantly.
+          </div>
+          <div class="feature-item">
+            <strong>Ghost-Writer</strong>
+            Generate personalized cover letters and professional emails.
+          </div>
+          <div class="feature-item">
+            <strong>University Rankings</strong>
+            Browse programs by location and reputation.
+          </div>
+          <div class="feature-item">
+            <strong>Grade Calculator</strong>
+            Track weighted grades and get "Grade Guard" alerts.
           </div>
           <div class="feature-item">
             <strong>Resume Builder</strong>
@@ -303,7 +295,7 @@
 
     <footer>
       <p>For more information, contact <a href="mailto:ds2jin@uwaterloo.ca">ds2jin@uwaterloo.ca</a></p>
-      <p>External Resource: <a href="https://tsgstudios.ca" target="_blank">TSG Studios</a></p>
+      <p>External Resource: <a href="https://leo.tsgstudios.ca/" target="_blank">Leo AI Debugging Tool</a></p>
     </footer>
 
   </body>
